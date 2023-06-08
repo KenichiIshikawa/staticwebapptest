@@ -21,11 +21,26 @@
   // ページ表示完了した15秒後にリロード
   setTimeout(doReload, 15000);
   });
+  var now = new Date();
+  function LoadProc() {
+      var target = document.getElementById("DateTimeDisp");
+
+      var Year = now.getFullYear();
+      var Month = now.getMonth()+1;
+      var Date = now.getDate();
+      var Hour = now.getHours();
+      var Min = now.getMinutes();
+      var Sec = now.getSeconds();
+
+      target.innerHTML = Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec;
+    }
 </script>
-<body>
+<body onload="LoadProc();">
   <main>
     <h1>Vanilla JavaScript App</h1>
   </main>
+  ロード時刻:
+   <div id="DateTimeDisp"></div>
 </body>
 
 </html>
