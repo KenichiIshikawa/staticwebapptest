@@ -7,7 +7,21 @@
   <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
 </head>
+<script>
+  // ページをreloadする方法
+  // reloadの基本的な使い方
+  function doReload() {
+  
+  // reloadメソッドによりページをリロード
+  window.location.reload();
+  }
 
+  window.addEventListener('load', function () {
+
+  // ページ表示完了した15秒後にリロード
+  setTimeout(doReload, 15000);
+  });
+</script>
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
